@@ -35,10 +35,6 @@
  \end{frame}
 
 \begin{frame}
- \bibliography{philoeco}
-\end{frame}
-
-\begin{frame}
 	\frametitle{\translate{Outline}}
 	\tableofcontents[hideallsubsections, sectionstyle=shaded/show]
 \end{frame}
@@ -162,6 +158,14 @@
 	\end{center}
 \end{frame}
 
+\appendix
+\AtBeginSection{
+}
+
+\begin{frame}[allowframebreaks]
+  \bibliography{philoeco}
+ \end{frame}
+
 % \section{Bibliography}
 % \begin{frame}[allowframebreaks]
 % % \def\section*#1{PLOUM} ?
@@ -189,10 +193,6 @@
 \end{frame}
 \addtocounter{framenumber}{-1}
 \end{document}
-
-\appendix
-\AtBeginSection{
-}
 
 \begin{frame}
 	\frametitle{Title}
