@@ -121,6 +121,17 @@
 }{
 }
 %For presentations, Beamer implicitely uses the pdfusetitle option. autonum doc mandates option hypertexnames=false. I want to highlight links only if necessary for the reader to recognize it as a link, to reduce distraction. In presentations, this is already taken care of by beamer (https://tex.stackexchange.com/a/262014). If using colorlinks=true in a presentation, see https://tex.stackexchange.com/q/203056. Crashes the first compilation with tikzposter, just compile again and the problem disappears, see https://tex.stackexchange.com/q/254257.
+\makeatletter
+\iftoggle{LCpres}{
+	\usepackage{hyperref}
+}{% Used to have linkbordercolor={1 1 1}, citebordercolor={1 1 1}, urlbordercolor={1 1 1} instead of pdfborder={0 0 0} but this creates visual glitches in some PDF viewers.
+	\usepackage[hypertexnames=false, pdfusetitle, pdfborder={0 0 0}, breaklinks]{hyperref}
+	%https://tex.stackexchange.com/a/466235
+	\pdfstringdefDisableCommands{%
+		\let\thanks\@gobble
+	}
+}
+\makeatother
 %urlbordercolor is used both for \url and \doi, which I think shouldn’t be colored, and for \href, thus might want to color manually when required. Requires xcolor.
 	\NewDocumentCommand{\hrefblue}{mm}{\textcolor{blue}{\href{#1}{#2}}}
 %hyperref doc says: “Package bookmark replaces hyperref’s bookmark organization by a new algorithm (...) Therefore I recommend using this package”.
@@ -216,14 +227,3 @@
 	\setcounter{tocdepth}{10}
 }{
 }
-\makeatletter
-\iftoggle{LCpres}{
-	\usepackage{hyperref}
-}{% Used to have linkbordercolor={1 1 1}, citebordercolor={1 1 1}, urlbordercolor={1 1 1} instead of pdfborder={0 0 0} but this creates visual glitches in some PDF viewers.
-	\usepackage[hypertexnames=false, pdfusetitle, pdfborder={0 0 0}, breaklinks]{hyperref}
-	%https://tex.stackexchange.com/a/466235
-	\pdfstringdefDisableCommands{%
-		\let\thanks\@gobble
-	}
-}
-\makeatother
