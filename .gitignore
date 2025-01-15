@@ -14,5 +14,7 @@
 *.toc
 *.vrb
 
+.olauth
+
 *.pdf
 
