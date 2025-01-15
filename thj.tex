@@ -12,7 +12,7 @@
 \author{Léa Meissonnier \and Olivier Cailloux}
 \institute[Paris-Dauphine]{Université Paris-Dauphine}
 \date{\formatdate{24}{1}{2025}}
-
+  
 \begin{document}
 \begin{frame}[plain]
 	\tikz[remember picture,overlay]{
@@ -29,6 +29,14 @@
 	\titlepage
 \end{frame}
 \addtocounter{framenumber}{-1}
+
+\begin{frame}
+  Hello world~\cite{dworkin_taking_1978}
+ \end{frame}
+
+\begin{frame}
+ \bibliography{philoeco}
+\end{frame}
 
 \begin{frame}
 	\frametitle{\translate{Outline}}
@@ -61,17 +69,7 @@
 	\begin{itemize}
 		\item To do
 	\end{itemize}
-\citep{Charles85,Smith89}
-
-\begin{thebibliography}{99}
-
-\bibitem[Charles, 1985]{Charles85} Anne Charles: \emph{Title}. 1985
-
-\bibitem[Smith, 1989]{Smith89} Jane Smith: \emph{Another Title}. 1989
-
-\end{thebibliography}
 \end{frame}
-\end{document}
 
 \section{Les théories de la justice}
 \subsection{Les termes}
@@ -103,10 +101,10 @@
 \begin{frame}
 	\frametitle{Des principes}
 	\begin{itemize}
-		% \item Égalité (socialisme ?)
-		% \item Liberté (libertarianisme ?)
-		% \item Valeurs fondamentales distinctes donc théories irréconciliables ?
-		\item Solution \citep{Charles85}%{dworkin_taking_1978} : égalité au sens large ?
+		\item Égalité (socialisme ?)
+		\item Liberté (libertarianisme ?)
+		\item Valeurs fondamentales distinctes donc théories irréconciliables ?
+		\item Solution \citep{dworkin_taking_1978} : égalité au sens large ?
 	\end{itemize}
 \end{frame}
 
@@ -172,16 +170,15 @@
 % 	\def\newblock{\hskip .11em plus .33em minus .07em}
 % 	\bibliography{philoeco}
 % \end{frame}
-\begin{frame}[allowframebreaks]
-	% \frametitle{\refname}
-  \begin{thebibliography}{9}
-    \bibitem[Charles, 1985]{Charles85}
-    Leslie Lamport (1994) \emph{\LaTeX: a document preparation system}, Addison
-    Wesley, Massachusetts, 2nd ed.
-    \end{thebibliography}
-       % \bibliography{philoeco}
-\end{frame}
-\end{document}
+% \begin{frame}[allowframebreaks]
+% 	% \frametitle{\refname}
+%   \begin{thebibliography}{9}
+%     \bibitem[Charles, 1985]{Charles85}
+%     Leslie Lamport (1994) \emph{\LaTeX: a document preparation system}, Addison
+%     Wesley, Massachusetts, 2nd ed.
+%     \end{thebibliography}
+%        % \bibliography{philoeco}
+% \end{frame}
 
 \clearpage\pdfbookmark{License}{License}
 \begin{frame}[plain]
